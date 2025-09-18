@@ -1,3 +1,4 @@
+
 import React, { useState, useCallback } from 'react';
 import { DropZone } from './components/DropZone';
 import { ImageViewer } from './components/ImageViewer';
@@ -79,8 +80,8 @@ const App: React.FC = () => {
     <div className="relative min-h-screen flex flex-col items-center justify-center p-4 font-sans overflow-hidden">
       <RetroGrid />
       <main className="w-full max-w-4xl mx-auto flex flex-col items-center z-10">
-        <h1 className="text-4xl md:text-5xl font-bold text-slate-100 mb-6 text-center tracking-wide">
-          AI <span className="text-violet-500">Редактор</span>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center tracking-wide bg-[linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))] animate-rainbow bg-[length:200%] bg-clip-text text-transparent">
+          AI Редактор
         </h1>
 
         <div className="w-full max-w-lg aspect-square rounded-2xl shadow-2xl flex items-center justify-center mb-6 relative overflow-hidden">
