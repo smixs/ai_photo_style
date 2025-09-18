@@ -9,6 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --color-1: 0 100% 63%;
+        --color-2: 270 100% 63%;
+        --color-3: 210 100% 63%;
+        --color-4: 195 100% 63%;
+        --color-5: 90 100% 63%;
+      }
+    </style>
     <script>
       tailwind.config = {
         theme: {
@@ -21,14 +30,24 @@
               'slate-800': '#1e293b',
               'slate-100': '#f1f5f9',
               'violet-500': '#8b5cf6',
+              "color-1": "hsl(var(--color-1))",
+              "color-2": "hsl(var(--color-2))",
+              "color-3": "hsl(var(--color-3))",
+              "color-4": "hsl(var(--color-4))",
+              "color-5": "hsl(var(--color-5))",
             },
             animation: {
               grid: "grid 15s linear infinite",
+              rainbow: "rainbow 2s infinite linear",
             },
             keyframes: {
               grid: {
                 "0%": { transform: "translateY(-50%)" },
                 "100%": { transform: "translateY(0)" },
+              },
+              rainbow: {
+                "0%": { "background-position": "0%" },
+                "100%": { "background-position": "200%" },
               },
             },
           }

@@ -7,6 +7,7 @@ import { AppState, Style } from './types';
 import { STYLES } from './constants';
 import { DownloadIcon, NewPhotoIcon } from './components/icons';
 import { RetroGrid } from './components/ui/RetroGrid';
+import { RainbowButton } from './components/ui/rainbow-button';
 
 const App: React.FC = () => {
   const [originalImage, setOriginalImage] = useState<File | null>(null);
@@ -97,21 +98,15 @@ const App: React.FC = () => {
         
         {appState !== AppState.INITIAL && (
             <div className="flex space-x-4 mb-6">
-                <button
-                    onClick={handleReset}
-                    className="flex items-center justify-center gap-2 px-6 py-2 bg-slate-700 text-slate-100 rounded-lg hover:bg-slate-600 transition-colors duration-200"
-                >
+                <RainbowButton onClick={handleReset} className="gap-2">
                     <NewPhotoIcon />
                     Новое фото
-                </button>
+                </RainbowButton>
                 {appState === AppState.COMPLETED && stylizedImageUrl && (
-                    <button
-                        onClick={handleDownload}
-                        className="flex items-center justify-center gap-2 px-6 py-2 bg-violet-500 text-white rounded-lg hover:bg-violet-600 transition-colors duration-200"
-                    >
+                    <RainbowButton onClick={handleDownload} className="gap-2">
                         <DownloadIcon />
                         Скачать
-                    </button>
+                    </RainbowButton>
                 )}
             </div>
         )}
