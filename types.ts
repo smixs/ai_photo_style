@@ -1,8 +1,9 @@
+import React from 'react';
 
 export interface Style {
   id: string;
   name: string;
-  emoji: string;
+  icon: React.FC<{ className?: string }>;
   prompt: string;
 }
 
