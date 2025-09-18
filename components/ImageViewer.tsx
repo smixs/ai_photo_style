@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
-import { Spinner } from './icons';
+import LiquidLoading from './ui/LiquidLoader';
 
 interface ImageViewerProps {
   original: string;
@@ -81,7 +81,7 @@ export const ImageViewer: React.FC<ImageViewerProps> = ({ original, stylized, is
 
       {isLoading && (
         <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center backdrop-blur-sm z-20">
-            <Spinner />
+            <LiquidLoading />
             <p className="mt-4 text-lg font-semibold animate-pulse">Применяем магию...</p>
         </div>
       )}
