@@ -1,0 +1,5 @@
+{
+  "name": "AI Photo Editor",
+  "description": "A single-page web application to stylize photos using the Gemini API. Users can upload an image, choose from a variety of creative styles, and instantly see a before-and-after comparison of the AI-generated result.",
+  "requestFramePermissions": []
+}
